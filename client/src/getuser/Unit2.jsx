@@ -10,7 +10,7 @@ const Unit2 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/unit2/users"); // Updated API for Unit 2
+        const response = await axios.get("https://rbo-digitalization-1.onrender.com/api/unit2/users"); // Updated API for Unit 2
         setUsers(response.data);
       } catch (error) {
         console.log("Error while fetching data", error);
@@ -22,7 +22,7 @@ const Unit2 = () => {
   const deleteUser = async (userId) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       try {
-        const response = await axios.delete(`http://localhost:8000/api/delete/unit2/user/${userId}`);
+        const response = await axios.delete(`https://rbo-digitalization-1.onrender.com/api/delete/unit2/user/${userId}`);
         setUsers((prevUsers) => prevUsers.filter((user) => user._id !== userId));
         toast.success(response.data.message, { position: "top-right" });
       } catch (error) {

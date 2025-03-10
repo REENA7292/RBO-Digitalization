@@ -43,7 +43,7 @@ const UpdateUser = () => {
 
     useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/user/${id}`)
+      .get(`https://rbo-digitalization-1.onrender.com/api/user/${id}`)
       .then((response) => {
         setUser(response.data);
       })
@@ -55,7 +55,7 @@ const UpdateUser = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:8000/api/update/user/${id}`, user);
+      const response = await axios.put(`https://rbo-digitalization-1.onrender.com/api/update/user/${id}`, user);
       toast.success(response.data.message, { position: "top-right" });
       navigate("/unit1");
     } catch (error) {

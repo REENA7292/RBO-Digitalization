@@ -44,7 +44,7 @@ const AddUnit2 = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/api/unit2/user", user);
+      const response = await axios.post("https://rbo-digitalization-1.onrender.com/api/unit2/user", user);
       toast.success(response.data.message, { position: "top-right" });
       navigate("/unit2");
     } catch (error) {

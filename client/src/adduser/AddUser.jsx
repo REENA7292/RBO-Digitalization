@@ -43,7 +43,7 @@ const AddUser = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/api/user", user);
+      const response = await axios.post("https://rbo-digitalization-1.onrender.com/api/user", user);
       toast.success(response.data.message, { position: "top-right" });
       navigate("/unit1");
     } catch (error) {
