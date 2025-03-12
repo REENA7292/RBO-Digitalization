@@ -108,42 +108,42 @@ const AddUnit2 = () => {
 
         <div className="inputGroup">
           <label htmlFor="empNo">Employee Number:</label>
-          <input type="number" id="empNo" name="empNo" value={user.empNo} onChange={inputHandler} placeholder="Enter Employee Number" required />
+          <input type="number" id="empNo" name="empNo" value={user.empNo} onChange={inputHandler} placeholder="Enter Employee Number"/>
         </div>
 
         <div className="inputGroup">
           <label htmlFor="empName">Employee Name:</label>
-          <input type="text" id="empName" name="empName" value={user.empName} onChange={inputHandler} placeholder="Enter Employee Name" required />
+          <input type="text" id="empName" name="empName" value={user.empName} onChange={inputHandler} placeholder="Enter Employee Name"/>
         </div>
 
         <div className="inputGroup">
           <label htmlFor="grade">Grade:</label>
-          <input type="text" id="grade" name="grade" value={user.grade} onChange={inputHandler} placeholder="Enter Grade" required />
+          <input type="text" id="grade" name="grade" value={user.grade} onChange={inputHandler} placeholder="Enter Grade" />
         </div>
 
         <div className="inputGroup">
           <label htmlFor="designation">Designation:</label>
-          <input type="text" id="designation" name="designation" value={user.designation} onChange={inputHandler} placeholder="Enter Designation" required />
+          <input type="text" id="designation" name="designation" value={user.designation} onChange={inputHandler} placeholder="Enter Designation" />
         </div>
 
         <div className="inputGroup">
           <label htmlFor="typeOfPosition">Type of Position:</label>
-          <input type="text" id="typeOfPosition" name="typeOfPosition" value={user.typeOfPosition} onChange={inputHandler} placeholder="Enter Type of Position" required />
+          <input type="text" id="typeOfPosition" name="typeOfPosition" value={user.typeOfPosition} onChange={inputHandler} placeholder="Enter Type of Position"/>
         </div>
 
         <div className="inputGroup">
           <label htmlFor="positionBandwidthLow">Position Bandwidth (Low):</label>
-          <input type="text" id="positionBandwidthLow" name="positionBandwidthLow" value={user.positionBandwidthLow} onChange={inputHandler} placeholder="Enter Low Bandwidth" required />
+          <input type="text" id="positionBandwidthLow" name="positionBandwidthLow" value={user.positionBandwidthLow} onChange={inputHandler} placeholder="Enter Low Bandwidth" />
         </div>
 
         <div className="inputGroup">
           <label htmlFor="positionBandwidthHigh">Position Bandwidth (High):</label>
-          <input type="text" id="positionBandwidthHigh" name="positionBandwidthHigh" value={user.positionBandwidthHigh} onChange={inputHandler} placeholder="Enter High Bandwidth" required />
+          <input type="text" id="positionBandwidthHigh" name="positionBandwidthHigh" value={user.positionBandwidthHigh} onChange={inputHandler} placeholder="Enter High Bandwidth"/>
         </div>
 
         <div className="inputGroup">
           <label htmlFor="availability">Availability:</label>
-          <select id="availability" name="availability" value={user.availability} onChange={inputHandler} required>
+          <select id="availability" name="availability" value={user.availability} onChange={inputHandler}>
             <option value="">Select Availability</option>
             <option value="Occupied">Occupied</option>
             <option value="Hold">Hold</option>
@@ -172,8 +172,7 @@ const AddUnit2 = () => {
     name="positionHoldDate" 
     value={user.positionHoldDate} 
     onChange={inputHandler} 
-    placeholder="Enter Position Hold Date" 
-    required 
+    placeholder="Enter Position Hold Date"
   />
 </div>
 
@@ -185,8 +184,7 @@ const AddUnit2 = () => {
     name="jdIssued" 
     value={user.jdIssued} 
     onChange={inputHandler} 
-    placeholder="Enter JD Issued" 
-    required 
+    placeholder="Enter JD Issued"
   />
 </div>
 
@@ -199,7 +197,6 @@ const AddUnit2 = () => {
     value={user.reportingEmpNo} 
     onChange={inputHandler} 
     placeholder="Enter Reporting Employee Number" 
-    required 
   />
 </div>
 
@@ -212,7 +209,6 @@ const AddUnit2 = () => {
     value={user.reportingEmpName} 
     onChange={inputHandler} 
     placeholder="Enter Reporting Employee Name" 
-    required 
   />
 </div>
 
@@ -225,7 +221,7 @@ const AddUnit2 = () => {
     value={user.reportingEmpDesignation} 
     onChange={inputHandler} 
     placeholder="Enter Reporting Employee Designation" 
-    required 
+    
   />
 </div>
 
