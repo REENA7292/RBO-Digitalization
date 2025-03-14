@@ -177,13 +177,14 @@ const User = () => {
               <td>{user.reportingEmpName}</td>
               <td>{user.reportingEmpDesignation}</td>
               <td className="actionButtons">
-                <Link to={`/update/${user._id}`} type="button" className="btn btn-info">
-                  <i className="fa-solid fa-pen-to-square"></i>
-                </Link>
-                <button onClick={() => deleteUser(user._id)} type="button" className="btn btn-danger">
-                  <i className="fa-solid fa-trash"></i>
-                </button>
-              </td>
+  <Link to={`/update/${user._id}`} className="btn-update">
+    Update
+  </Link>
+  <button onClick={() => deleteUser(user._id)} className="btn-delete">
+    Delete
+  </button>
+</td>
+
             </tr>
           ))}
         </tbody>

@@ -65,6 +65,57 @@ const UpdateUnit2 = () => {
     }
   };
 
+  // Dropdown options
+  const unitOptions = ["LLS U2"];
+  const divisionOptions = ["LIFE SCIENCES", "TOOLING"];
+  const functionOptions = [
+    "BUSINESS DEVELOPMENT",
+    "BUSINESS UNIT HEAD",
+    "CUSTOMER SERVICE",
+    "DESIGN",
+    "FINANCE & ACCOUNTS",
+    "HUMAN RESOURCE",
+    "INFORMATION TECHNOLOGY",
+    "MANUFACTURING",
+    "PRODUCTION PLANNING&CONTROL",
+    "PROJECT MANAGEMENT",
+    "QUALITY ASSURANCE",
+    "SUPPLY CHAIN MANAGEMENT",
+  ];
+  const departmentOptions = [
+    "ACCOUNTS PAYABLE",
+    "ACCOUNTS RECEIVABLE",
+    "ASSEMBLY",
+    "BUH",
+    "COST ACCOUNTS",
+    "DESIGN",
+    "DESIGN (ELECTRODE)",
+    "DESIGN (MOULD)",
+    "DEVELOPMENT",
+    "FINANCE & ACCOUNTS",
+    "HUMAN RESOURCES",
+    "IT",
+    "MACHINE SHOP",
+    "MANUFACTURING-TOOLING",
+    "MARKETING",
+    "MARKETING - TOOLING",
+    "MOULD MAINTENANCE",
+    "POLISHING",
+    "PROCESS PLANNING",
+    "PRODUCT PLANNING",
+    "PRODUCTION",
+    "PROJECT PLANNING",
+    "PURCHASE",
+    "QUALITY ASSURANCE",
+    "SCM",
+    "STORES",
+    "TOOL ASSEMBLY",
+    "TPM",
+  ];
+  const roleCategoryOptions = ["FUNCTIONAL", "MANAGERIAL", "OPERATOR", "STRATEGIC"];
+  const positionMatchOptions = ["MATCH", "MISMATCH"];
+  const availabilityOptions = ["HOLD", "OCCUPIED", "RESIGNED", "VACANT"];
+
   return (
     <div className="addUser">
       <Link to="/unit2" className="btn btn-secondary">
@@ -73,30 +124,71 @@ const UpdateUnit2 = () => {
 
       <h3>Update Unit2 Employee</h3>
       <form className="addUserForm" onSubmit={submitForm}>
+        {/* Unit Dropdown */}
         <div className="inputGroup">
           <label htmlFor="unit">Unit:</label>
-          <input type="text" id="unit" name="unit" value={user.unit} onChange={inputHandler} required />
+          <select id="unit" name="unit" value={user.unit} onChange={inputHandler} required>
+            <option value="">Select Unit</option>
+            {unitOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
 
+        {/* Division Dropdown */}
         <div className="inputGroup">
           <label htmlFor="division">Division:</label>
-          <input type="text" id="division" name="division" value={user.division} onChange={inputHandler} required />
+          <select id="division" name="division" value={user.division} onChange={inputHandler} required>
+            <option value="">Select Division</option>
+            {divisionOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
 
+        {/* Function Dropdown */}
         <div className="inputGroup">
           <label htmlFor="function">Function:</label>
-          <input type="text" id="function" name="function" value={user.function} onChange={inputHandler} required />
+          <select id="function" name="function" value={user.function} onChange={inputHandler} required>
+            <option value="">Select Function</option>
+            {functionOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
 
+        {/* Department Dropdown */}
         <div className="inputGroup">
           <label htmlFor="department">Department:</label>
-          <input type="text" id="department" name="department" value={user.department} onChange={inputHandler} required />
+          <select id="department" name="department" value={user.department} onChange={inputHandler} required>
+            <option value="">Select Department</option>
+            {departmentOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
 
+        {/* Role Category Dropdown */}
         <div className="inputGroup">
           <label htmlFor="roleCategory">Role Category:</label>
-          <input type="text" id="roleCategory" name="roleCategory" value={user.roleCategory} onChange={inputHandler} required />
+          <select id="roleCategory" name="roleCategory" value={user.roleCategory} onChange={inputHandler} required>
+            <option value="">Select Role Category</option>
+            {roleCategoryOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
+
 
         <div className="inputGroup">
           <label htmlFor="roleCode">Role Code:</label>
@@ -153,21 +245,29 @@ const UpdateUnit2 = () => {
           <input type="text" id="positionBandwidthHigh" name="positionBandwidthHigh" value={user.positionBandwidthHigh} onChange={inputHandler} />
         </div>
 
+        {/* Position Match Dropdown */}
         <div className="inputGroup">
           <label htmlFor="positionMatch">Position Match:</label>
           <select id="positionMatch" name="positionMatch" value={user.positionMatch} onChange={inputHandler}>
             <option value="">Select Position Match</option>
-            <option value="Match">Match</option>
-            <option value="Mismatch">Mismatch</option>
+            {positionMatchOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
           </select>
         </div>
 
+        {/* Availability Dropdown */}
         <div className="inputGroup">
           <label htmlFor="availability">Availability:</label>
           <select id="availability" name="availability" value={user.availability} onChange={inputHandler}>
             <option value="">Select Availability</option>
-            <option value="Occupied">Occupied</option>
-            <option value="Vacant">Vacant</option>
+            {availabilityOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
           </select>
         </div>
 
