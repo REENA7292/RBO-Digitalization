@@ -33,7 +33,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <h1 className="dashboard-title">RBO DIGITALIZATION</h1>
+      <h1 className="dashboard-title">LLS RBO</h1>
 
       <div className="dashboard-grid">
         {/* Unit 1 Section */}

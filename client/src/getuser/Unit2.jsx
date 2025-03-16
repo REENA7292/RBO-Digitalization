@@ -80,7 +80,7 @@ const Unit2 = () => {
       {/* 🔹 Buttons Section */}
       <div className="button-container">
         <Link to="/add/unit2" className="btn-add">
-          Add Employee <i className="fa-solid fa-user-plus"></i>
+         Add New Job and Role <i className="fa-solid fa-user-plus"></i>
         </Link>
         
         <Link to="/" className="btn-home">

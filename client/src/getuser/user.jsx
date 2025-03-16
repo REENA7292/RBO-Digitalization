@@ -80,7 +80,7 @@ const User = () => {
       {/* 🔹 Buttons Section */}
       <div className="button-container">
         <Link to="/add" className="btn-add">
-          Add Employee <i className="fa-solid fa-user-plus"></i>
+          Add New Job and Role <i className="fa-solid fa-user-plus"></i>
         </Link>
         
         <Link to="/" className="btn-home">
